@@ -1,86 +1,81 @@
 * {
-    font-family: sans-serif;
-}
-
-body {
-    background-color: white;
-    margin: 0 auto;
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: brown;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 60px;
+    display: flex; /*Splits the logo and nav items apart*/
+    justify-content: space-around; /*Adds space between the logo and nav items*/
+    align-items: center; /*Center aligns the logo and nav items*/
+    background-color: brown; /*Navbar background color*/
+    padding-right: 20px; /*Adds padding to the right side of the navbar*/
+    height: 50px; /*Sets the height of the navbar*/
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+body {
+    margin: 0 auto; 
+    background-image: url("background.png"); /*Sets image as the background of the body*/
 }
 
 a {
-    margin-left: 20px;
-    border: 2px solid white;
-    text-align: center;
-    padding: 5px;
-    color: white;
-    display: inline-block;
-    width: 70px;
-    border-radius: 15px;
-    text-decoration: none;
+    margin-left: 20px; /*Increase the left side margin size of the nav items*/
+    border: 2px solid white; /*Sets the border properties of the nav items*/
+    text-align: center; /*Center aligns the text of the nav items*/
+    padding: 5px; /*Adds padding to all sides of the nav items*/
+    color: white; /*Sets the font color of the nav items*/
+    width: 70px; /*Sets the width of the nav items*/
+    border-radius: 15px; /*Sets the border radius of the nav items*/
+    text-decoration: none; /*Removes text decoration of the nav items like underline*/
 }
 
 .logo {
-    color: white;
-    font-size: 20px;
-    font-weight: 800;
+    color: white; /*Sets the font color of the logo in the navbar*/
+    font-size: 20px; /*Sets the font size of the logo in the navbar*/
+    font-weight: 800; /*Sets the boldness of the logo in the navbar*/
 }
 
 ul {
-    align-items: center;
-    display: flex;
+    display: flex; /*Splits the nav items evenly*/
+    align-items: center; /*Centers the nav items horizontally*/
 }
 
 .theme-selector {
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
-    border: 0px;
+    width: 25px; /*Sets the width of the theme selector button in the navbar*/
+    height: 25px; /*Sets the height of the theme selector button in the navbar*/
+    border-radius: 25px; /*Sets the border radius of the theme selector button in the navbar*/
+    border: 0px; /*Sets the border properties of the theme selector button in the navbar*/
 }
 
 footer {
-    background-color: gray;
-    position: absolute;
-    margin: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.main-content {
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    font-weight: 600;
-    align-items: center;
-    height: 70vh;
-    overflow: hidden;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.main-content-name {
-    font-size: 50px;
-}
-
-.main-content-description {
-    font-size: 30px;
+    background-color: gray; /*Sets the background color of the footer*/
+    position: fixed; /*Fixes the footer to the bottom when scrolling*/
+    bottom: 0; /*Position the footer to the bottom of the page*/
+    width: 100%; /*Sets the width of the footer to always cover the occupied space*/
+    color: white; /*Sets the font color of the footer*/
+    text-align: center; /*Center aligns the text of the footer*/
 }
 
 .tech-pic {
-    width: 650px;
-    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    height: 660px;
+    align-items: center; /* Vertically center the children */
+    height: 100vh;
+}
+
+.main-content-section-one,
+.main-content-section-two {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    width: 600px;
 }
 
 .custom-btn {
