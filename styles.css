@@ -8,7 +8,6 @@
     display: flex; /*Splits the logo and nav items apart*/
     justify-content: space-around; /*Adds space between the logo and nav items*/
     align-items: center; /*Center aligns the logo and nav items*/
-    background-color: brown; /*Navbar background color*/
     padding-right: 20px; /*Adds padding to the right side of the navbar*/
     height: 50px; /*Sets the height of the navbar*/
     top: 0;
@@ -23,14 +22,31 @@ body {
 }
 
 a {
+    position: relative;
     margin-left: 20px; /*Increase the left side margin size of the nav items*/
-    border: 2px solid white; /*Sets the border properties of the nav items*/
     text-align: center; /*Center aligns the text of the nav items*/
     padding: 5px; /*Adds padding to all sides of the nav items*/
     color: white; /*Sets the font color of the nav items*/
-    width: 70px; /*Sets the width of the nav items*/
-    border-radius: 15px; /*Sets the border radius of the nav items*/
     text-decoration: none; /*Removes text decoration of the nav items like underline*/
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after{
+    width: 100%;
 }
 
 .logo {
