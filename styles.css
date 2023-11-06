@@ -86,6 +86,10 @@ footer {
     box-shadow: 10px 10px;
 }
 
+.main-content-name, .main-content-description {
+    animation: fade-down 2s;
+}
+
 .custom-btn {
     width: 160px;
     height: 60px;
@@ -93,6 +97,11 @@ footer {
     color: white;
     background-color: dodgerblue;
     border: 0px;
+}
+
+.custom-btn:hover {
+    background-color: #155799;
+    transition: 0.3s;
 }
 
 .objects {
@@ -158,6 +167,18 @@ footer {
     width: 110px;
     height: 110px;
     animation-delay: 3.5s;
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
 @keyframes animate {
