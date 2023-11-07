@@ -201,11 +201,11 @@ footer {
 
     .main-content-section-one {
         width: 200px;
-        height: 550px;
+        height: 450px;
     }
 
     .main-content-name, .main-content-description {
-        font-size: 35px;
+        font-size: 29px;
     }
 
     .custom-btn {
