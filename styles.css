@@ -213,11 +213,6 @@ footer {
         height: 50px;
         font-size: 20px;
     }
-
-    body {
-        height: 100%;
-        overflow: hidden;
-    }
 }
 
 @keyframes fade-down {
