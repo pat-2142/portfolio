@@ -200,8 +200,8 @@ footer {
     }
 
     .main-content-section-one {
-        width: 200px;
-        height: 450px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .main-content-name, .main-content-description {
