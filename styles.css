@@ -199,6 +199,10 @@ footer {
         height: 40px;
     }
 
+    .main-content {
+        height: 100vh;
+    }
+
     .main-content-section-one {
         margin-left: 20px;
         margin-right: 20px;
@@ -212,10 +216,6 @@ footer {
         width: 130px;
         height: 50px;
         font-size: 20px;
-    }
-
-    body {
-        height: 100vh;
     }
 }
 
