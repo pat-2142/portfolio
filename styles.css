@@ -1,239 +1,307 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 * {
+    box-sizing: border-box;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbar {
-    display: flex; /*Splits the logo and nav items apart*/
-    justify-content: space-around; /*Adds space between the logo and nav items*/
-    align-items: center; /*Center aligns the logo and nav items*/
-    padding-right: 20px; /*Adds padding to the right side of the navbar*/
-    height: 50px; /*Sets the height of the navbar*/
-    top: 0;
-    position: fixed;
+ /* For mobile phones: */
+ [class*="col-"] {
     width: 100%;
 }
 
 body {
-    margin: 0 auto; 
-    background: linear-gradient(to right,#159957,#155799);
-}
-
-a {
-    position: relative;
-    margin-left: 20px; /*Increase the left side margin size of the nav items*/
-    text-align: center; /*Center aligns the text of the nav items*/
-    padding: 5px; /*Adds padding to all sides of the nav items*/
-    color: white; /*Sets the font color of the nav items*/
-    text-decoration: none; /*Removes text decoration of the nav items like underline*/
-    font-weight: 800;
-}
-
-a::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: 0px;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: black;
-}
-
-a:hover::after{
-    width: 100%;
+  background-color: #474f55;
 }
 
 .logo {
-    color: white; /*Sets the font color of the logo in the navbar*/
-    font-size: 20px; /*Sets the font size of the logo in the navbar*/
-    font-weight: 800; /*Sets the boldness of the logo in the navbar*/
-}
-
-ul {
-    display: flex; /*Splits the nav items evenly*/
-    align-items: center; /*Centers the nav items horizontally*/
-}
-
-footer {
-    background-color: gray; /*Sets the background color of the footer*/
-    position: fixed; /*Fixes the footer to the bottom when scrolling*/
-    bottom: 0; /*Position the footer to the bottom of the page*/
-    width: 100%; /*Sets the width of the footer to always cover the occupied space*/
-    color: white; /*Sets the font color of the footer*/
-    text-align: center; /*Center aligns the text of the footer*/
-}
-
-.main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertically center the children */
-    height: 100vh;
-    z-index: 2;
-}
-
-.main-content-section-one {
-    padding-left: 60px;
-    padding-right: 60px;
-    font-size: 50px;
-    width: 768px;
-    background-color: rgb(226, 226, 226);
-    box-shadow: 10px 10px;
-}
-
-.main-content-name, .main-content-description {
-    animation: fade-down 2s;
+  text-decoration: none;
+  color: white;
 }
 
 .custom-btn {
-    width: 160px;
-    height: 60px;
-    font-size: 25px;
-    color: white;
-    background-color: dodgerblue;
-    border: 0px;
+  padding: 20px;
+  color: white;
+  background-color: #2980b9;
+  border: 0px;
+  font-weight: 800;
 }
 
 .custom-btn:hover {
-    background-color: #155799;
-    transition: 0.3s;
+  background-color: #155799;
+  transition: 0.3s;
 }
 
-.objects {
-    background: linear-gradient(to right,#159957,#155799);
-    width: 100%;
-    height: 100vh;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #474f55;
+  top: 0;
+  position: fixed;
+  color: white;
+  border-bottom: 2px solid white;
+  font-weight: 800;
+}
+
+.nav-link {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  background-color: lightblue;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-link {
+  position: relative;
+  margin-left: 20px; /*Increase the left side margin size of the nav items*/
+  text-align: center; /*Center aligns the text of the nav items*/
+  padding: 5px; /*Adds padding to all sides of the nav items*/
+  color: white; /*Sets the font color of the nav items*/
+  text-decoration: none; /*Removes text decoration of the nav items like underline*/
+  font-weight: 800;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.nav-link:hover::after{
+  width: 100%;
+}
+
+.main-content {
+  font-size: 40px;
+  margin-top: 65px;
+  margin-bottom: 50px;
+  color: white;
+  font-weight: 800;
+  animation: fade-up 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980b9;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+  margin-top: 16px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown menu on hover */
+.dropdown:hover .dropbtn {
+  background-color: #2980b9;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
 }
 
 .box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    overflow: hidden;
-    margin-top: 50px;
+  position: fixed;
+  top: 2%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .box li {
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 25px;
-    height: 25px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 20s linear infinite;
-    bottom: -150px;
-    border-radius: 50%;
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+  border-radius: 50%;
 }
 
 .box li:nth-child(1) {
-    left: 86%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
 }
 
 .box li:nth-child(2) {
-    left: 12%;
-    width: 30px;
-    height: 30px;
-    animation-delay: 1.5s;
-    animation-duration: 10s;
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
 }
 
 .box li:nth-child(3) {
-    left: 70%;
-    width: 100px;
-    height: 100px;
-    animation-delay: 5.5s;
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
 }
 
 .box li:nth-child(4) {
-    left: 45%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 15s;
+  left: 45%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
 }
 
 .box li:nth-child(5) {
-    left: 15%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3.5s;
-}
-
-.drop-btn {
-    width: 30px;
-    height: 30px;
-    display: none;
-}
-
-@media (max-width: 720px) {
-    a {
-        display: none;
-    }
-
-    .logo {
-        font-size: 25px;
-    }
-
-    footer {
-        font-size: 15px;
-    }
-
-    .drop-btn {
-        display: block;
-        width: 40px;
-        height: 40px;
-    }
-
-    .main-content {
-        height: 90vh;
-    }
-
-    .main-content-section-one {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .main-content-name, .main-content-description {
-        font-size: 29px;
-    }
-
-    .custom-btn {
-        width: 130px;
-        height: 50px;
-        font-size: 20px;
-    }
-}
-
-@keyframes fade-down {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px) scale(1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-    }
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
 }
 
 @keyframes animate {
+  0% {
+      transform: translateY(0) scale(0);
+  }
+
+  100% {
+      transform: translateY(-1000px) scale(2);
+      opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+      opacity: 0;
+      transform: translateY(50px) scale(1);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+  }
+}
+  
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+   /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .nav-link {
+      display: inline;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .main-content {
+      margin-top: 50px;
+      height: 85vh;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 900px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1500px) {
+  @keyframes animate {
     0% {
         transform: translateY(0) scale(0);
     }
-
+  
     100% {
-        transform: translateY(-800px) scale(2);
+        transform: translateY(-1300px) scale(2);
         opacity: 0;
     }
+  }
 }
