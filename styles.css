@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+/*Settings for all the elements*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,15 +12,18 @@
     width: 100%;
 }
 
+/*Body element setings*/
 body {
   background-color: #474f55;
 }
 
+/*Settings for element with 'logo' class*/
 .logo {
   text-decoration: none;
   color: white;
 }
 
+/*Settings for all buttons in the body element*/
 .custom-btn {
   padding: 20px;
   color: white;
@@ -28,15 +32,14 @@ body {
   font-weight: 800;
 }
 
+/*Hover settings for all buttons in the body element*/
 .custom-btn:hover {
   background-color: #155799;
   transition: 0.3s;
 }
 
+/*Settings for the navbar*/
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #474f55;
   top: 0;
   position: fixed;
@@ -45,10 +48,20 @@ body {
   font-weight: 800;
 }
 
+.navbar-items-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/*Disables desktop nav links on mobile screens*/
 .nav-link {
   display: none;
 }
 
+/*Settings for the footer element*/
 .footer {
   text-align: center;
   bottom: 0;
@@ -56,11 +69,13 @@ body {
   background-color: lightblue;
 }
 
+/*Settings for the menu-icon on mobile screens*/
 .menu-icon {
   width: 30px;
   height: 30px;
 }
 
+/*Settings for the desktop nav links*/
 .nav-link {
   position: relative;
   margin-left: 20px; /*Increase the left side margin size of the nav items*/
@@ -91,7 +106,7 @@ body {
 }
 
 .main-content {
-  font-size: 40px;
+  font-size: 25px;
   margin-top: 65px;
   margin-bottom: 50px;
   color: white;
@@ -100,6 +115,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-content-section-one {
+  max-width: 1200px;
 }
 
 .dropbtn {
@@ -303,5 +322,12 @@ body {
         transform: translateY(-1300px) scale(2);
         opacity: 0;
     }
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .main-content {
+    margin-top: 120px;
+    margin-bottom: 120px;
   }
 }
