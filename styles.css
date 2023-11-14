@@ -121,6 +121,10 @@ body {
   max-width: 1200px;
 }
 
+.project-container-image {
+  display: none;
+}
+
 .dropbtn {
   background-color: #3498db;
   color: white;
@@ -304,7 +308,24 @@ body {
 
     .main-content {
       margin-top: 50px;
-      height: 85vh;
+    }
+
+    .project-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-container-description {
+      width: 400px;
+    }
+
+    .project-image {
+      height: 400px;
+    }
+
+    .project-container-image {
+      display: block;
     }
 }
 
