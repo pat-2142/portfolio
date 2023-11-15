@@ -67,6 +67,7 @@ body {
   bottom: 0;
   position: fixed;
   background-color: lightblue;
+  font-size: 14px;
 }
 
 /*Settings for the menu-icon on mobile screens*/
@@ -326,6 +327,11 @@ body {
 
     .project-container-image {
       display: block;
+    }
+
+    .languages-and-frameworks {
+      display: flex;
+      justify-content: space-evenly;
     }
 }
 
