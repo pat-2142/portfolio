@@ -152,6 +152,17 @@ body {
   margin-top: 16px;
 }
 
+.contact-container {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.contact-image {
+  height: 70px;
+  width: 70px;
+}
+
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -318,7 +329,7 @@ body {
     }
 
     .project-container-description {
-      width: 400px;
+      width: 100%;
     }
 
     .project-image {
@@ -332,6 +343,15 @@ body {
     .languages-and-frameworks {
       display: flex;
       justify-content: space-evenly;
+    }
+
+    .contact-image {
+      height: 100px;
+      width: 100px;
+    }
+
+    .contact-container {
+      font-size: 25px;
     }
 }
 
